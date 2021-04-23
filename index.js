@@ -24,7 +24,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: ["http://localhost:3000", "http://localhost:3001", "http://localhost:5001", "http://localhost:5000"],
     credentials: true,
 }));
 app.use(express.static('public'));

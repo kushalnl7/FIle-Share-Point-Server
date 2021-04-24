@@ -26,7 +26,7 @@ let upload = multer({
 router.post('/', (req, res) => {
 
     // Storing File
-    console.log(req.myfile);
+    // console.log(req.myfile);
     upload(req, res, async (err) => {
         const token = req.cookies['token'];
         if (!token) {
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
         const userId = decodedToken.user;
 
-        console.log(req);
+        // console.log(req);
         // Validation
         if (!req.file) {
             return res.json({ error: 'All fields are required.' });
